@@ -76,6 +76,7 @@ This is why the version number hasn't reached 1.0 yet.
   future versions, but it's a hard problem to solve. If you do happen to access the file system from multiple devices at the same time, it will likely go well most of the time, but it can corrupt your file system.
 - In addition to the scenarios above that can corrupt your file system, note that there is currently no fsck-like tool for CryFS that could recover your data. Although such a tool is in theory, possible,
   it hasn't been implemented yet and a corrupted file system will most likely cause a loss of your data.
+- If you load a significant amount of data into the vault, the performance may be impacted so severely that access of the data may become very slow or even infeasible. Furthermore moving data out of the vault may result in errors or crashes of the moving process. In addition to this, cryfs will create a significant amount of individual files, making it difficult to move the vault, as it may contain millions of files.
 
 If the scenarios mentioned above don't apply to you, then you can consider CryFS 0.10.x as stable. The 0.9.x versions are not recommended anymore.
 
